@@ -1,25 +1,18 @@
-import logo from "./logo.svg";
-import "./App.css";
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
+import React from "react";
+import ReactDOM from "react-dom";
+import Logo from "./Logo";
+import BestPokemon from "./BestPokemon";
+let abilities=["fighting","hunting","distant-vision"];
+let date= new Date();
+let myDate=date.toLocaleDateString();
+const CaughtPokemon = () =>(
+    <p>Caught 0 pokemon on {myDate} </p>
+);
+function App(){
+   return  <div>
+     <Logo appName="Lamagaia"/>
+     <BestPokemon abilities={abilities}/>
+     <CaughtPokemon/>
+    </div>;
+}ReactDOM.render(<App/>,document.getElementById("root"));
 export default App;
