@@ -1,11 +1,11 @@
 import React from "react";
 
-const BestPokemon =(props) =>(
-    <div>
+const BestPokemon =(props,index) =>(
+    <div >
    <p>The Best Pokemon is the Lamagaia</p>
    <ul>
 {props.abilities.map((ab)=>(
-     <li>{ab}</li>
+     <li key={index}>{ab}</li>
 ))}
    </ul>
    </div>
