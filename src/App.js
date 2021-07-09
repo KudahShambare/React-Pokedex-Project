@@ -1,12 +1,12 @@
 import React from "react";
 import Logo from "./Logo";
 import BestPokemon from "./BestPokemon";
+import CaughtPokeman from "./CaughtPokeman";
+import PokemonMoves from "./PokemonMoves";
+import PokemonMoveSelector from "./PokemonMoveSelector";
+import PokemonCity from "./PokemonCity";
 
 let abilities = ["fighting", "hunting", "distant-vision"];
-let date = new Date();
-let myDate = date.toLocaleDateString();
-
-const CaughtPokemon = () => <p>Caught 0 pokemon on {myDate} </p>;
 
 function logWhenClicked() {
   console.log("event added");
@@ -16,7 +16,10 @@ function App() {
     <div>
       <Logo appName="Lamagaia" event={logWhenClicked} />
       <BestPokemon abilities={abilities} />
-      <CaughtPokemon />
+      <CaughtPokeman />
+      <PokemonMoves />
+      <PokemonMoveSelector />
+      <PokemonCity/>
     </div>
   );
 }
